@@ -1,4 +1,4 @@
 function pwd() {
-    process.stdout.write(process.cwd())
+    return process.cwd()
 }
 module.exports = pwd

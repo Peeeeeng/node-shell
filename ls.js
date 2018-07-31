@@ -1,4 +1,5 @@
 const fs = require('fs');
+let done = require('./done.js')
 
 function ls() {
 
@@ -6,7 +7,8 @@ function ls() {
         if (err) {
             throw err
         } else {
-            process.stdout.write(files.join('\n'))
+            done(files.join('\n'))
+            return files.join('\n')
         }
     })
 }
